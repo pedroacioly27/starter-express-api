@@ -1,15 +1,16 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const knex = require('./conexao')
+// const knex = require('./conexao')
 
 app.use(express.json())
 
 
 app.get('/', async (req, res) => {
     try {
-        const carros = await knex('carros')
-        res.json(carros)
+        // const carros = await knex('carros')
+        // res.json(carros)
+        res.json('ok')
 
     } catch (error) {
         console.log(error);
